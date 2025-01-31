@@ -25,7 +25,6 @@ const Header = () => {
     useEffect(() => {
         const currentRoute = location.pathname;
         setRoute(currentRoute)
-        console.log('Current route:', currentRoute);
     }, [location]);
 
     return (

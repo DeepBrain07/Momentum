@@ -1,16 +1,36 @@
-
+import { useState } from "react"
 import Header from "../../components/Header/Header"
 import { academy2, graduate, nurse, cholesterol, image3, image4 } from "../../assets/images"
 import Footer from "../../components/Footer/Footer"
 import Button from "../../components/Button/Button"
+import Modal from "../../components/Modal/Modal"
+
 
 const Academy = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
     return (
         <div className="w-[100%] bg-backgroundColor">
             <div className="px-[2vw] md:px-10 bg-white fixed z-50 top-0 left-0 w-[100%] border">
                 <Header/>
             </div>
             <div className="pt-[100px] flex flex-col">
+                <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} >
+                    <div className="flex flex-col gap-4">
+                        <p className="text-[#000]  font-bold sm:text-[20px]">Enter your email to download</p>
+                        <p className="text-bodyText text-[12px] md:text-[16px]">Enter your email to receive a copy of “article/ resource name” in your inbox </p>     
+                        <div className="w-[100%]">
+                            <p className="text-[15px] mb-1">Email Address</p>
+                            <input
+                                type="email"
+                                placeholder="Enter email address"
+                                className="w-[100%] p-2 border border-[#CBD5E1] rounded-md"
+                            />
+                        </div>
+                        <div className="flex justify-center">
+                            <Button title="Download Article" func={()=>{}}/> 
+                        </div>
+                    </div>
+                </Modal>
                 <div className="p-4 md:p-10 flex flex-col gap-8 bg-backgroundColor">
                     <div className="flex gap-4 flex-col md:w-[80%]">
                         
@@ -29,7 +49,7 @@ const Academy = () => {
                         <p className="text-bodyText text-center -tracking-wider">Momentum Academy is dedicated to empowering healthcare professionals and students with the skills, knowledge, and mentorship they need to excel. Through expert-led programs and practical training, we prepare individuals to thrive in a fast-evolving industry.
                         <br/>Whether you're advancing your career, seeking mentorship, or exploring global healthcare opportunities, Momentum Academy provides the tools and support to help you succeed. Together, we’re shaping the future of healthcare excellence.</p>
                         <div>
-                            <Button title="Read Our Brochure" func={()=>{}}/>
+                            <Button title="Read Our Brochure" func={()=>{setIsModalOpen(true)}}/>
                         </div>
                     </div>
                 </div>

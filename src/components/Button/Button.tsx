@@ -12,7 +12,8 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> = ({title, func, color, article, icon, secondary}) => {
     return (
         <button 
-           className={`p-2 rounded-md ${color ?? false ? 'bg-white' : secondary ? 'bg-secondary' : 'bg-primary'} px-4 flex items-center gap-1`}
+        onClick={() => func()}   
+        className={`p-2 rounded-md ${color ?? false ? 'bg-white' : secondary ? 'bg-secondary' : 'bg-primary'} px-4 flex items-center gap-1`}
         >
             {(icon && !article) && 
                 <Icon

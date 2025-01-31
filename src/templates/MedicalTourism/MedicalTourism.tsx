@@ -1,4 +1,3 @@
-import { Icon } from "@iconify/react/dist/iconify.js"
 import Header from "../../components/Header/Header"
 import TeamMemberComponent from "../../components/TeamMemberCard/TeamMemberCard"
 import { medicalTourism2, avatar,} from "../../assets/images"
