@@ -28,74 +28,74 @@ const HealthMediaManagement = () => {
                 </div>
 
                 <div className="px-4 mt-10 py-14 md:px-20 w-[100%] flex flex-col gap-4 bg-white">
-                <div className="w-full flex flex-col md:flex-row items-center gap-8 md:justify-between md:gap-[10%]">
-                    <div className="w-[90%] md:w-[50%] flex flex-col gap-4">
-                        <p className={`text-bodyTextColor text-[16px] font-bold tracking-wide`}>We have number to back up our claims</p>
-                        <p className={`text-bodyTextColor text-[22px] font-bold tracking-wider`}>Our online presence</p>
-                        <p className={`text-bodyTextColor text-[16px] font-light tracking-wide`}>We craft strategic health media campaigns that educate, engage, and inspire audiences amplifying brand awareness and lead generation. From content creation to digital marketing, we connect healthcare providers with the people who need them most.</p>
-                        <div className="flex flex-col w-[100%] gap-10 items-center flex-wrap"> 
-                            <div className="flex gap-[20vw] md:gap-36 w-[100%] justify-center">   
-                                {/* Facebook */}
-                                <a href="">
-                                    <Icon
-                                        icon="logos:facebook"
-                                        width={40}
-                                        color="white"
-                                    />
-                                </a>
-                                {/* Instagram */}
-                                <a>
-                                    <Icon
-                                        icon="skill-icons:instagram"
-                                        width={40}
-                                        color="white"
-                                    />
-                                </a>
+                    <div className="w-full flex flex-col md:flex-row items-center gap-8 md:justify-between md:gap-[10%]">
+                        <div className="w-[90%] md:w-[50%] flex flex-col gap-4">
+                            <p className={`text-bodyTextColor text-[16px] font-bold tracking-wide`}>We have number to back up our claims</p>
+                            <p className={`text-bodyTextColor text-[22px] font-bold tracking-wider`}>Our online presence</p>
+                            <p className={`text-bodyTextColor text-[16px] font-light tracking-wide`}>We craft strategic health media campaigns that educate, engage, and inspire audiences amplifying brand awareness and lead generation. From content creation to digital marketing, we connect healthcare providers with the people who need them most.</p>
+                            <div className="flex flex-col w-[100%] gap-10 items-center flex-wrap"> 
+                                <div className="flex gap-[20vw] md:gap-36 w-[100%] justify-center">   
+                                    {/* Facebook */}
+                                    <a href="">
+                                        <Icon
+                                            icon="logos:facebook"
+                                            width={40}
+                                            color="white"
+                                        />
+                                    </a>
+                                    {/* Instagram */}
+                                    <a>
+                                        <Icon
+                                            icon="skill-icons:instagram"
+                                            width={40}
+                                            color="white"
+                                        />
+                                    </a>
+                                </div>
+                                <div className="flex gap-[20vw] md:gap-36 w-[100%] justify-center">
+                                    {/* Twitter */}
+                                    <a>
+                                        <Icon
+                                            icon="devicon:twitter"
+                                            width={40}
+                                            color="white"
+                                        />
+                                    </a>
+                                    {/* LinkedIn */}
+                                    <a>
+                                        <Icon
+                                            icon="skill-icons:linkedin"
+                                            width={40}
+                                            color="white"
+                                        />
+                                    </a>
+                                </div>
+                                <div className="flex gap-[20vw] md:gap-36 w-[100%] justify-center">
+                                    {/* YouTube */}
+                                    <a>
+                                        <Icon
+                                            icon="logos:youtube-icon"
+                                            width={40}
+                                            color="white"
+                                        />
+                                    </a>
+                                    {/* WhatsApp */}
+                                    <a>
+                                        <Icon
+                                            icon="logos:whatsapp-icon"
+                                            width={40}
+                                            color="white"
+                                        />
+                                    </a>
+                                </div>
                             </div>
-                            <div className="flex gap-[20vw] md:gap-36 w-[100%] justify-center">
-                                {/* Twitter */}
-                                <a>
-                                    <Icon
-                                        icon="devicon:twitter"
-                                        width={40}
-                                        color="white"
-                                    />
-                                </a>
-                                {/* LinkedIn */}
-                                <a>
-                                    <Icon
-                                        icon="skill-icons:linkedin"
-                                        width={40}
-                                        color="white"
-                                    />
-                                </a>
-                            </div>
-                            <div className="flex gap-[20vw] md:gap-36 w-[100%] justify-center">
-                                {/* YouTube */}
-                                <a>
-                                    <Icon
-                                        icon="logos:youtube-icon"
-                                        width={40}
-                                        color="white"
-                                    />
-                                </a>
-                                {/* WhatsApp */}
-                                <a>
-                                    <Icon
-                                        icon="logos:whatsapp-icon"
-                                        width={40}
-                                        color="white"
-                                    />
-                                </a>
+                            <div>
+                                <Button title="Book our service today" func={()=>{}} />
                             </div>
                         </div>
-                        <div>
-                            <Button title="Book our service today" func={()=>{}} />
-                        </div>
+                        <img src={megaphone} alt="megaphone" className="rounded-md w-[90%] md:w-[32%] h-[300px] md:h-[400px]"/>
+                        
                     </div>
-                    <img src={megaphone} alt="megaphone" className="rounded-md w-[90%] md:w-[32%] h-[300px] md:h-[400px]"/>
-                    
-                </div>
                 </div>
 
                 <div className="px-4 mt-10 py-8 md:px-20 w-[100%] flex flex-col gap-2 bg-primary">

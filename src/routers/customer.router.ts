@@ -8,6 +8,7 @@ import Articles from "../templates/Articles/Articles";
 import Author from "../templates/Author/Author";
 import MedicalTourism from "../templates/MedicalTourism/MedicalTourism";
 import HealthMediaManagement from "../templates/HealthMediaManagement/HealthMediaManagement";
+import Academy from "../templates/Academy/Academy";
 // import Result from "../layouts/customer-layout/confirm-payment/Result"; 
 
 export const CustomerRoutePaths = {
@@ -83,5 +84,9 @@ export const CustomerRouter = createBrowserRouter([
   {
     path: CustomerRoutePaths.Customer.MedicalTourism,
     Component: MedicalTourism,
+  },
+  {
+    path: CustomerRoutePaths.Customer.Academy,
+    Component: Academy,
   }
 ]);

@@ -1,10 +1,9 @@
 import { Icon } from "@iconify/react/dist/iconify.js"
 import Header from "../../components/Header/Header"
 import TeamMemberComponent from "../../components/TeamMemberCard/TeamMemberCard"
-import { healthmediaManagement2, medicalTourism2, whatWeCanOffer, cholesterol, avatar, JoinUs, image2, image3, image4, healthcareConsulting1, whyChooseUs, whyChooseUsMobile, marketing, businessAnalytics, strategy, medicalWriting,} from "../../assets/images"
+import { medicalTourism2, avatar,} from "../../assets/images"
 import Footer from "../../components/Footer/Footer"
 import Button from "../../components/Button/Button"
-import { megaphone } from "../../assets/images"
 
 const MedicalTourism = () => {
     return (

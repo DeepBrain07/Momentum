@@ -30,6 +30,7 @@ export { default as author } from "./author.png"
 export { default as megaphone } from "./megaphone.png"
 export { default as whatWeCanOffer } from "./whatWeCanOffer.png"
 export { default as medicalTourism2 } from "./medicalTourism2.png"
-
-
+export { default as academy2 } from "./academy2.png"
+export { default as graduate } from "./graduate.png"
+export { default as nurse } from "./nurse.png"
 
