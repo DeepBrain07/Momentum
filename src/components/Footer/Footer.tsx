@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import { momentumLogo } from "../../assets/images";
 import './style.css'
@@ -11,10 +12,10 @@ const Footer = () => {
             <div className="flex w-[100%] gap:10 flex-wrap ml-4 flex-col md:flex-row items-start justify-between">
                 <div className="flex mb-10 flex-col gap-4">
                     <div className="border-b-2 border-[#000] w-fit pr-2 "><p className="font-bold tracking-wide text-[20px] text-[#0d0d0d]">Discover</p></div>
-                    <p>Health Care Consulting</p>
-                    <p>Health Media Management</p>
-                    <p>Medical Tourism</p>
-                    <p>Academy</p>
+                    <Link to="/healthcare-consulting"><p>Health Care Consulting</p></Link>
+                    <Link to="/healthmedia-management"><p>Health Media Management</p></Link>
+                    <Link to="/medical-tourism"><p>Medical Tourism</p></Link>
+                    <Link to="/academy"><p>Academy</p></Link>
                 </div>
                 
                 <div className="flex mb-10 flex-col gap-4">

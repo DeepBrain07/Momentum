@@ -144,7 +144,7 @@ const HealthCareConsulting = () => {
                     </div>
                 </div>
 
-                <div className="px-4 mt-16 w-[100%] pt-10 border-2 md:px-20 flex flex-col justify-center items-center ">
+                <div className="px-4 mt-16 w-[100%] pt-10 md:px-20 flex flex-col justify-center items-center ">
                     <div className="flex w-[90%] sm:w-[70%] flex-col p-4 gap-6 bg-white shadow-md rounded-md">    
                         <p className="text-[#000]  font-bold sm:text-[26px]">Send us a message</p>
                         <p className="text-bodyText text-[15px] md:text-[18px]">Need assistance or have a question? Fill out the form below or drop us a message, and we’ll be in touch shortly.</p>     
