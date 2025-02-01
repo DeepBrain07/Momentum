@@ -20,9 +20,9 @@ const Footer = () => {
                 
                 <div className="flex mb-10 flex-col gap-4">
                     <div className="border-b-2 border-[#000] w-fit pr-2 "><p className="font-bold tracking-wide text-[20px] text-[#0d0d0d]">Discover</p></div>
-                    <p>About Us</p>
-                    <p>Careers</p>
-                    <p>Contact Us</p>
+                    <Link to="/about-us"><p>About Us</p></Link>
+                    <Link to="/careers"><p>Careers</p></Link>
+                    <Link to="/contact-us"><p>Contact Us</p></Link>
                 </div>
             
                 <div className="flex mb-10 flex-col gap-4">
