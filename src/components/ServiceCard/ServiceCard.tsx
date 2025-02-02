@@ -7,9 +7,10 @@ interface ServiceCardProps {
     detailsLink: string;
     buttonColor?: string;
     fontColor?: string
+    func?: () => void;
   }
 
-const ServiceCard1: React.FC<ServiceCardProps> = ({title, content, image, detailsLink, buttonColor, fontColor}) => {
+const ServiceCard1: React.FC<ServiceCardProps> = ({title, content, func, image, detailsLink, buttonColor, fontColor}) => {
     console.log(detailsLink)
     return (
         <div className="w-full flex flex-col md:flex-row items-center gap-8 md:justify-between md:gap-[10%]">
@@ -17,7 +18,10 @@ const ServiceCard1: React.FC<ServiceCardProps> = ({title, content, image, detail
                 <p className={`text-${fontColor || 'white'} text-[22px] font-bold tracking-wider`}>{title}</p>
                 <p className={`text-${fontColor || 'white'} text-[16px] font-light tracking-wide`}>{content}</p>
                 <div>
-                    <Button title="View Details" func={()=>{}} color={buttonColor} />
+                    {!func ? <Button title="View Details" func={()=>{}} color={buttonColor} />
+                        :
+                        <Button title="View Details" func={func} color={buttonColor} />
+                    }
                 </div>
             </div>
             <img src={image} alt="servide image" className="rounded-md w-[90%] md:w-[32%] h-[300px] md:h-[400px]"/>
@@ -26,7 +30,7 @@ const ServiceCard1: React.FC<ServiceCardProps> = ({title, content, image, detail
     )
 }
 
-const ServiceCard2: React.FC<ServiceCardProps> = ({title, content, image, detailsLink, buttonColor, fontColor}) => {
+const ServiceCard2: React.FC<ServiceCardProps> = ({title, content, image, detailsLink, buttonColor, fontColor, func}) => {
     console.log(detailsLink)
     return (
         <div className="w-full flex flex-col md:flex-row items-center gap-8 md:justify-between md:gap-[10%]">
@@ -34,9 +38,10 @@ const ServiceCard2: React.FC<ServiceCardProps> = ({title, content, image, detail
             <div className="w-[90%] md:w-[50%] flex flex-col gap-4">
                 <p className={`text-${fontColor || 'white'} text-[22px] font-bold tracking-wider`}>{title}</p>
                 <p className={`text-${fontColor || 'white'} text-[16px] font-light tracking-wide`}>{content}</p>
-                <div>
-                    <Button title="View Details" func={()=>{}} color={buttonColor} />
-                </div>
+                {!func ? <Button title="View Details" func={()=>{}} color={buttonColor} />
+                    :
+                    <Button title="View Details" func={func} color={buttonColor} />
+                }
             </div>            
         </div>
     )

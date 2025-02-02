@@ -1,13 +1,16 @@
 import Header from "../../components/Header/Header"
+import { useNavigate } from "react-router-dom"
 import { Icon } from "@iconify/react/dist/iconify.js"
 import { AboutUsVisionAndMission } from "../../assets/images"
 import {ServiceCard1, ServiceCard2} from "../../components/ServiceCard/ServiceCard"
 import { mobileHeroImage, heroImage, healthCareConsulting, healthMediaManagement, medicalTourism, academy, socialBackground, newsletterBackground } from "../../assets/images"
 import Footer from "../../components/Footer/Footer"
 import Button from "../../components/Button/Button"
+import { CustomerRoutePaths } from "../../routers/customer.router"
 
 const Landing = () => {
     
+    const navigate = useNavigate()
     const imageCount = 20;
 
     return (
@@ -75,10 +78,11 @@ const Landing = () => {
                 <div className="flex flex-col gap-12">
                     <div className="p-4 md:p-10 bg-[#CA0146]">
                         <ServiceCard1
-                            title="HealthCare Consulting"
+                            title="Health Care Consulting"
                             content="We provide tailored solutions for healthcare startups, public health organizations, pharmaceutical companies, hospitals,laboratories and Health financing organisations. Our services include strategy, operations, business analytics, market access, marketing, medical writing, and health media management."
                             detailsLink=""
                             image={healthCareConsulting}
+                            func={()=>navigate(CustomerRoutePaths.Customer.HealthCareConsulting)}
                         />
                     </div>
                     <div className="p-4 md:p-10 bg-[#013B7D]">
@@ -88,6 +92,7 @@ const Landing = () => {
                             detailsLink=""
                             image={healthMediaManagement}
                             buttonColor="#fff"
+                            func={()=>navigate(CustomerRoutePaths.Customer.HealthMediaManagement)}
                         />
                     </div>
                     <div className="p-4 md:p-10 bg-[#EDB52A]">
@@ -97,6 +102,7 @@ const Landing = () => {
                             detailsLink=""
                             fontColor="#000"
                             image={medicalTourism}
+                            func={()=>navigate(CustomerRoutePaths.Customer.MedicalTourism)}
                         />
                     </div>
                     <div className="p-4 md:p-10 bg-[#64B05C]">
@@ -106,6 +112,7 @@ const Landing = () => {
                             detailsLink=""
                             image={academy}
                             fontColor="#000"
+                            func={()=>navigate(CustomerRoutePaths.Customer.HealthMediaManagement)}
                         />
                     </div>
                     <div 
