@@ -3,11 +3,6 @@ import { contactUs } from "../../assets/images"
 import { Icon } from "@iconify/react/dist/iconify.js"
 import './style.css'
 
-import { AboutUsVisionAndMission } from "../../assets/images"
-import { momentumLogo } from "../../assets/images"
-import ServiceComponent from "../../components/Service/ServiceComponent"
-import TeamMemberComponent from "../../components/TeamMemberCard/TeamMemberCard"
-import { avatar } from "../../assets/images"
 import Footer from "../../components/Footer/Footer"
 import { JoinUs } from "../../assets/images"
 import Button from "../../components/Button/Button"

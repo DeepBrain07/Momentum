@@ -10,6 +10,7 @@ interface ServiceCardProps {
   }
 
 const ServiceCard1: React.FC<ServiceCardProps> = ({title, content, image, detailsLink, buttonColor, fontColor}) => {
+    console.log(detailsLink)
     return (
         <div className="w-full flex flex-col md:flex-row items-center gap-8 md:justify-between md:gap-[10%]">
             <div className="w-[90%] md:w-[50%] flex flex-col gap-4">

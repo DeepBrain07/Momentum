@@ -1,5 +1,4 @@
-import { Icon } from "@iconify/react/dist/iconify.js"; 
-import { link } from "fs";
+import { Icon } from "@iconify/react/dist/iconify.js";
 
 interface TeamMemberComponentProps {
     name: string;
