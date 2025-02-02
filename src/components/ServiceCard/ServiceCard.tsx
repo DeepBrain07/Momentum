@@ -27,6 +27,7 @@ const ServiceCard1: React.FC<ServiceCardProps> = ({title, content, image, detail
 }
 
 const ServiceCard2: React.FC<ServiceCardProps> = ({title, content, image, detailsLink, buttonColor, fontColor}) => {
+    console.log(detailsLink)
     return (
         <div className="w-full flex flex-col md:flex-row items-center gap-8 md:justify-between md:gap-[10%]">
             <img src={image} alt="servide image" className="rounded-md w-[90%] md:w-[32%] h-[300px] md:h-[400px]"/>
