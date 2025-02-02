@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react/dist/iconify.js"
 import Header from "../../components/Header/Header"
-import { healthmediaManagement2, whatWeCanOffer, cholesterol, image2, image3, image4} from "../../assets/images"
+import { healthMediaManagement2, whatWeCanOffer, cholesterol, image2, image3, image4} from "../../assets/images"
 import Footer from "../../components/Footer/Footer"
 import Button from "../../components/Button/Button"
 import { megaphone } from "../../assets/images"
@@ -23,7 +23,7 @@ const HealthMediaManagement = () => {
                         </div>
                     </div>
                     <div className="w-[100%] rounded-sm">
-                        <img src={healthmediaManagement2} alt="image" className="w-[100%] h-[120px] md:h-auto"/>
+                        <img src={healthMediaManagement2} alt="image" className="w-[100%] h-[120px] md:h-auto"/>
                     </div>
                 </div>
 
