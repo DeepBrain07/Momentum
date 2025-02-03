@@ -48,7 +48,7 @@ const Landing = () => {
       <div className="pt-[100px] flex flex-col">
         {/* Desktop Hero */}
         <div
-          className="hidden md:block px-4 my-10 py-20 pb-40 md:px-20 w-[100%]"
+          className="hidden md:block px-4 my-10 mt-0 py-20  pb-40 md:px-20 w-[100%]"
           style={{
             backgroundImage: `url(${heroImage})`,
             backgroundSize: "cover",
@@ -68,7 +68,7 @@ const Landing = () => {
 
         {/* Mobile Hero */}
         <div
-          className="md:hidden px-4 my-10 py-20 pb-[500px] w-[100%]"
+          className="md:hidden px-4 my-10 mt-0 py-20 pb-[500px] w-[100%]"
           style={{
             backgroundImage: `url(${mobileHeroImage})`,
             backgroundSize: "cover",
@@ -84,6 +84,22 @@ const Landing = () => {
             </p>
             <Button title="Explore Services" func={scrollToServices} />
           </div>
+        </div>
+
+        <div className="px-4 p-10 md:px-20 pr-2 flex flex-col gap-8 justify-between">
+            <div className="flex gap-8 flex-col w-[100%] md:w-[60%]">
+                <p className="text-[#000] text-[22px] text-center">Trusted by leading health organizations globally.</p>
+            </div>
+            <div className="flex gap-4 overflow-x-scroll w-[100%]">
+                {Array(imageCount).fill(null).map((_, index) => (
+                    <img
+                        key={index}
+                        src={AboutUsVisionAndMission}
+                        alt="Vision and Mission"
+                        className="min-w-[200px] sm:min-w-[130px] min-h-[24px] sm:min-h-[24px] "
+                    />
+                ))}
+            </div>
         </div>
 
         {/* Services Section */}
