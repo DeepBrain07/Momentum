@@ -44,7 +44,7 @@ const ContactUs = () => {
                     <div className="flex w-[100%] flex-col p-4 gap-6 bg-white shadow-md rounded-md">    
                         <p className="text-[#000]  font-bold sm:text-[26px]">Send us a message</p>
                         <p className="text-bodyText text-[15px] md:text-[18px]">Need assistance or have a question? Fill out the form below or drop us a message, and we’ll be in touch shortly.</p>     
-                        <div className="mt-10 w-[100%] flex flex-col md:flex-row gap-[2%]">
+                        <div className="mt-10 w-[100%] flex flex-col md:flex-row gap-6 md:gap-[2%]">
                             <div className="w-[100%] md:w-[49%]">
                                 <p className="textStyle mb-1">First Name</p>
                                 <input

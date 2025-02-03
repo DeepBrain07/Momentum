@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <div className="flex w-[100%] mt-[100px] gap-10   flex-col md:flex-row items-start ">
             <div className="mb-10">
-                <img src={momentumLogo} alt="Momentum logo" className="w-[70%] sm:w-[300px] "/>
+                <a href="/"><img src={momentumLogo} alt="Momentum logo" className="w-[70%] sm:w-[300px] "/></a>
             </div>
             <div className="flex w-[100%] gap:10 flex-wrap ml-4 flex-col md:flex-row items-start justify-between">
                 <div className="flex mb-10 flex-col gap-4">

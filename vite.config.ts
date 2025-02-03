@@ -8,4 +8,7 @@ export default defineConfig({
     host: "0.0.0.0",
     port: 65000,
   },
+  css: {
+    postcss: './postcss.config.js', 
+  },
 });

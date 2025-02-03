@@ -38,11 +38,13 @@ const ServiceCard2: React.FC<ServiceCardProps> = ({title, content, image, detail
             <div className="w-[90%] md:w-[50%] flex flex-col gap-4">
                 <p className={`text-${fontColor || 'white'} text-[22px] font-bold tracking-wider`}>{title}</p>
                 <p className={`text-${fontColor || 'white'} text-[16px] font-light tracking-wide`}>{content}</p>
-                {!func ? <Button title="View Details" func={()=>{}} color={buttonColor} />
-                    :
-                    <Button title="View Details" func={func} color={buttonColor} />
-                }
-            </div>            
+                <div>
+                    {!func ? <Button title="View Details" func={()=>{}} color={buttonColor} />
+                        :
+                        <Button title="View Details" func={func} color={buttonColor} />
+                    }
+                </div>
+            </div>           
         </div>
     )
 }

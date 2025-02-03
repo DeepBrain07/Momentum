@@ -54,18 +54,22 @@ const AboutUs = () => {
                     </div>
                     <div className="w-[100%] p-4 flex gap-10 mt-10 border border-[#DB1E26] rounded-md justify-between flex-wrap items-center ">
                         <ServiceComponent
+                            link="/healthcare-consulting"
                             title="Health Care Consulting"
                             content="Our expert team provides tailored strategies for startups, hospitals, pharmaceutical companies, and health organizations to optimize operations and achieve measurable outcomes."
                         />
                         <ServiceComponent
+                            link="/healthmedia-management"
                             title="Health Media Management"
                             content="With a reach of over 100 million people, we specialize in amplifying your brand's presence through strategic media management and targeted advertising."
                         />
                         <ServiceComponent
+                            link="/medical-tourism"
                             title="Medical Tourism"
                             content="Connecting patients to world-class healthcare providers globally, we ensure personalized and effective medical management plans."
                         />
                         <ServiceComponent
+                            link="/academy"
                             title="Academy"
                             content="We empower healthcare professionals through mentorship, staffing solutions, and access to affordable education opportunities."
                         />
