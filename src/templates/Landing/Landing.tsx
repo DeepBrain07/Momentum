@@ -1,7 +1,6 @@
 import Header from "../../components/Header/Header";
 import { useNavigate } from "react-router-dom";
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { AboutUsVisionAndMission } from "../../assets/images";
 import {
   ServiceCard1,
   ServiceCard2,
@@ -15,7 +14,7 @@ import {
   academy,
   socialBackground,
   newsletterBackground,
-  company1, company2, company3, company4, company5, company6, company7, company8, company9
+  company1, company2, company3, company4, company5, company6, company7, company8, 
 } from "../../assets/images";
 import Footer from "../../components/Footer/Footer";
 import Button from "../../components/Button/Button";
@@ -27,7 +26,7 @@ const Landing = () => {
   const navigate = useNavigate();
 
 
-  const companies = [company1, company2, company3, company4, company5, company6, company7, company8, company9]
+  const companies = [company1, company2, company3, company4, company5, company6, company7, company8,]
 
   // Function to smoothly scroll to services section
   const scrollToServices = () => {
@@ -51,7 +50,7 @@ const Landing = () => {
       <div className="pt-[100px] flex flex-col">
         {/* Desktop Hero */}
         <div
-          className="hidden md:block px-4 my-10 mt-0 py-20  pb-40 md:px-20 w-[100%]"
+          className="hidden md:block px-4 my-10 mt-0 py-20  pb-30 md:px-20 w-[100%]"
           style={{
             backgroundImage: `url(${heroImage})`,
             backgroundSize: "cover",
@@ -65,7 +64,9 @@ const Landing = () => {
             <p className="text-[#fff] text-[18px] font-bold tracking-wider">
               Empowering healthcare organisations with unstoppable momentum.
             </p>
-            <Button title="Explore Services" func={scrollToServices} />
+            <div>
+                <Button title="Explore Services" func={scrollToServices} />
+            </div>
           </div>
         </div>
 
@@ -85,7 +86,9 @@ const Landing = () => {
             <p className="text-[#fff] text-[5vw] sm:text-[15px] font-bold text-center tracking-wider">
               Empowering healthcare organisations with unstoppable momentum.
             </p>
-            <Button title="Explore Services" func={scrollToServices} />
+            <div>
+                <Button title="Explore Services" func={scrollToServices} />
+            </div>
           </div>
         </div>
 

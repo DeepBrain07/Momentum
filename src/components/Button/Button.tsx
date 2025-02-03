@@ -11,26 +11,28 @@ interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = ({title, func, color, article, icon, secondary}) => {
     return (
-        <button 
-        onClick={() => func()}   
-        className={`p-2 rounded-md ${color ?? false ? 'bg-white' : secondary ? 'bg-secondary' : 'bg-primary'} px-4 flex items-center gap-1`}
-        >
-            {(icon && !article) && 
-                <Icon
-                    icon={icon}
-                    width={24}
-                    color="white"
-                />
-            }
-            <p className={`font-light ${color ?? false ? 'text-[#013B7D]' : 'text-white'} text-[4vw] sm:text-[15px] tracking-wide`}>{title}</p>
-            {(icon && article) && 
-                <Icon
-                    icon={icon}
-                    width={20}
-                    color="white"
-                />
-            }
-        </button>
+        <div>
+            <button 
+            onClick={() => func()}   
+            className={`p-2 rounded-md ${color ?? false ? 'bg-white' : secondary ? 'bg-secondary' : 'bg-primary'} px-4 flex items-center gap-1`}
+            >
+                {(icon && !article) && 
+                    <Icon
+                        icon={icon}
+                        width={24}
+                        color="white"
+                    />
+                }
+                <p className={`font-light ${color ?? false ? 'text-[#013B7D]' : 'text-white'} text-[4vw] sm:text-[15px] tracking-wide`}>{title}</p>
+                {(icon && article) && 
+                    <Icon
+                        icon={icon}
+                        width={20}
+                        color="white"
+                    />
+                }
+            </button>
+        </div>
     )
 }
 

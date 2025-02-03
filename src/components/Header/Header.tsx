@@ -43,7 +43,7 @@ const Header = () => {
             </div>
             <div className="hidden md:flex items-center gap-4">
                 <Link to="/about-us"><p className={`${route === '/about-us' ? 'border-b-2 border-primary' : ''}`}>About Us</p></Link>
-                <Link to="/articles"><p className={`${route === '/articles' ? 'border-b-2 border-primary' : ''}`}>Articles</p></Link>
+                <Link to="/articles"><p className={`${route === '/articles' ? 'border-b-2 border-primary' : ''}`}>Resources</p></Link>
                 <div
                     className="relative"
                     onMouseEnter={() => setShowDropDown(true)}
@@ -72,6 +72,7 @@ const Header = () => {
                         <Link to="/healthcare-consulting"><p className={`font-normal ${route === '/healthcare-consulting' ? 'border-b-2 border-primary' : ''} w-fit`}>Health Care Consulting</p></Link>
                         <Link to="/healthmedia-management"><p className={`font-normal ${route === '/healthmedia-management' ? 'border-b-2 border-primary' : ''} w-fit`}>Health Media Management</p></Link>
                         <Link to="/medical-tourism"><p className={`font-normal ${route === '/medical-tourism' ? 'border-b-2 border-primary' : ''} w-fit`}>Medical Tourism</p></Link>
+                        <Link to="/academy"><p className={`font-normal ${route === '/academy' ? 'border-b-2 border-primary' : ''} w-fit`}>Academy</p></Link>
                     </div>
                     )}
                 </div>
@@ -115,6 +116,7 @@ const Header = () => {
                             <Link to="/healthcare-consulting"><p className={`font-normal ${route === '/healthcare-consulting' ? 'border-b-2 border-primary' : ''} w-fit`}>Health Care Consulting</p></Link>
                             <Link to="/healthmedia-management"><p className={`font-normal ${route === '/healthmedia-management' ? 'border-b-2 border-primary' : ''} w-fit`}>Health Media Management</p></Link>
                             <Link to="/medical-tourism"><p className={`font-normal ${route === '/medical-tourism' ? 'border-b-2 border-primary' : ''} w-fit`}>Medical Tourism</p></Link>
+                            <Link to="/academy"><p className={`font-normal ${route === '/academy' ? 'border-b-2 border-primary' : ''} w-fit`}>Academy</p></Link>
                         </div>}
                     </div>
                     <Link to="/careers"><p className={`${route === '/careers' ? 'border-b-2 border-primary' : ''} w-fit`}>Careers</p></Link>
