@@ -15,6 +15,7 @@ import {
   academy,
   socialBackground,
   newsletterBackground,
+  company1, company2, company3, company4, company5, company6, company7, company8, company9
 } from "../../assets/images";
 import Footer from "../../components/Footer/Footer";
 import Button from "../../components/Button/Button";
@@ -24,7 +25,9 @@ import { useRef, useEffect } from "react";
 const Landing = () => {
   const servicesRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
-  const imageCount = 20;
+
+
+  const companies = [company1, company2, company3, company4, company5, company6, company7, company8, company9]
 
   // Function to smoothly scroll to services section
   const scrollToServices = () => {
@@ -91,12 +94,12 @@ const Landing = () => {
                 <p className="text-[#000] text-[22px] text-center">Trusted by leading health organizations globally.</p>
             </div>
             <div className="flex gap-4 overflow-x-scroll w-[100%]">
-                {Array(imageCount).fill(null).map((_, index) => (
+                {Array(companies.length).fill(null).map((_, index) => (
                     <img
                         key={index}
-                        src={AboutUsVisionAndMission}
+                        src={companies[index]}
                         alt="Vision and Mission"
-                        className="min-w-[200px] sm:min-w-[130px] min-h-[24px] sm:min-h-[24px] "
+                        className="min-w-[100px] sm:min-w-[100px] min-h-[15px] sm:min-h-[24px] "
                     />
                 ))}
             </div>
@@ -140,78 +143,117 @@ const Landing = () => {
               func={() => navigate(CustomerRoutePaths.Customer.MedicalTourism)}
             />
           </div>
+
+          
+          <div className="p-4 md:p-10 bg-[#64B05C]">
+                <ServiceCard2
+                    title="Academy"
+                    content="Leverage the power of our extensive social media reach—connecting with nearly 100 million individuals. Our dedicated team of health communication and marketing specialists excels in building brand awareness and driving lead generation. From strategic media management to targeted advertising, we help your organization amplify its impact and grow its audience effectively."
+                    detailsLink=""
+                    image={academy}
+                    fontColor="#000"
+                    func={()=>navigate(CustomerRoutePaths.Customer.Academy)}
+                />
+            </div>
         </div>
 
         <div 
-                        className="px-4 mt-10 py-16 md:px-20 w-[100%]  flex flex-col  gap-8 justify-center items-center"
-                        style={{
-                            backgroundImage: `url(${socialBackground})`,
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                            backgroundColor: 'rgba(219, 30, 38, 0.2)',
-                            backgroundBlendMode: 'multiply', 
-                        }}    
-                        >
-                            <p className="text-[#000] text-[22px] font-bold tracking-wider text-center">Check us out on our socials</p>
-                            <div className="flex gap-8 items-center justify-center flex-wrap"> 
-                                {/* Facebook */}
-                                <a href="https://www.facebook.com/share/1BvE3xUTz4/">
-                                    <Icon
-                                        icon="logos:facebook"
-                                        width={40}
-                                        color="white"
-                                    />
-                                </a>
-                                {/* Instagram */}
-                                <a href="https://www.instagram.com/momentum_healthcare?igsh=NHBiZzNlazFxNXlh">
-                                    <Icon
-                                        icon="skill-icons:instagram"
-                                        width={40}
-                                        color="white"
-                                    />
-                                </a>
-                                {/* Twitter */}
-                                <a href="https://x.com/momentumHCare?t=PAcSZG8zZ9sgtTzoDMf-Nw&s=09">
-                                    <Icon
-                                        icon="devicon:twitter"
-                                        width={40}
-                                        color="white"
-                                    />
-                                </a>
-                                {/* TikTok */}
-                                <a href="https://www.tiktok.com/@momentum_healthcare?_t=ZN-8tV6sf48xWA&_r=1">
-                                    <Icon
-                                        icon="mage:tiktok-circle"
-                                        width={40}
-                                        color="black"
-                                    />
-                                </a>
-                                {/* LinkedIn */}
-                                <a href="https://www.linkedin.com/company/momentum-healthcare-group">
-                                    <Icon
-                                        icon="skill-icons:linkedin"
-                                        width={40}
-                                        color="white"
-                                    />
-                                </a>
-                                {/* YouTube */}
-                                <a href="https://youtube.com/@momentumhealthcare2175?si=sCsYAPkK3wLwty9W">
-                                    <Icon
-                                        icon="logos:youtube-icon"
-                                        width={40}
-                                        color="white"
-                                    />
-                                </a>
-                                {/* WhatsApp */}
-                                <a href="https://wa.me/+4915218122588">
-                                    <Icon
-                                        icon="logos:whatsapp-icon"
-                                        width={40}
-                                        color="white"
-                                    />
-                                </a>
-                            </div>
+            className="px-4 mt-10 py-16 md:px-20 w-[100%]  flex flex-col  gap-8 justify-center items-center"
+            style={{
+                backgroundImage: `url(${socialBackground})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundColor: 'rgba(219, 30, 38, 0.2)',
+                backgroundBlendMode: 'multiply', 
+            }}    
+            >
+                <p className="text-[#000] text-[22px] font-bold tracking-wider text-center">Check us out on our socials</p>
+                <div className="flex gap-8 items-center justify-center flex-wrap"> 
+                    {/* Facebook */}
+                    <a href="https://www.facebook.com/share/1BvE3xUTz4/">
+                        <Icon
+                            icon="logos:facebook"
+                            width={40}
+                            color="white"
+                        />
+                    </a>
+                    {/* Instagram */}
+                    <a href="https://www.instagram.com/momentum_healthcare?igsh=NHBiZzNlazFxNXlh">
+                        <Icon
+                            icon="skill-icons:instagram"
+                            width={40}
+                            color="white"
+                        />
+                    </a>
+                    {/* Twitter */}
+                    <a href="https://x.com/momentumHCare?t=PAcSZG8zZ9sgtTzoDMf-Nw&s=09">
+                        <Icon
+                            icon="devicon:twitter"
+                            width={40}
+                            color="white"
+                        />
+                    </a>
+                    {/* TikTok */}
+                    <a href="https://www.tiktok.com/@momentum_healthcare?_t=ZN-8tV6sf48xWA&_r=1">
+                        <Icon
+                            icon="mage:tiktok-circle"
+                            width={40}
+                            color="black"
+                        />
+                    </a>
+                    {/* LinkedIn */}
+                    <a href="https://www.linkedin.com/company/momentum-healthcare-group">
+                        <Icon
+                            icon="skill-icons:linkedin"
+                            width={40}
+                            color="white"
+                        />
+                    </a>
+                    {/* YouTube */}
+                    <a href="https://youtube.com/@momentumhealthcare2175?si=sCsYAPkK3wLwty9W">
+                        <Icon
+                            icon="logos:youtube-icon"
+                            width={40}
+                            color="white"
+                        />
+                    </a>
+                    {/* WhatsApp */}
+                    <a href="https://wa.me/+4915218122588">
+                        <Icon
+                            icon="logos:whatsapp-icon"
+                            width={40}
+                            color="white"
+                        />
+                    </a>
+                </div>
+        </div>
+        
+        <div 
+            className="px-4 mt-10 py-20 pb-40 md:px-20 w-[100%]  flex flex-col gap-4 justify-center items-center"
+            style={{
+                backgroundImage: `url(${newsletterBackground})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+            }}    
+        >
+            <p className="text-[#fff] text-[26px] font-bold tracking-wider">Never miss a story</p>
+            <p className="text-[#fff] text-[18px] font-light tracking-wider text-center">Get our Weekly recap with the latest news, articles and resources.</p>
+            <div className="flex mt-10 flex-col gap-1 w-[100%] items-center justify-center">
+                <div className="w-[90%] md:w-[60%] items-start">
+                    <p className="text-white">Subscribe to our Newsletters</p>
+                    <div className="flex flex-col sm:flex-row gap-4 w-[100%] justify-center">
+                        <input
+                            type="text"
+                            placeholder="Enter your email"
+                            className="p-2 w-[90%]"
+                        />
+                        <div className="w-fit">
+                            <Button icon="fontisto:email" title="Subscribe" func={()=>console.log("sunscribe")}/>
+                        </div>
                     </div>
+                </div>                                
+            </div>
+        </div>
 
         {/* Footer */}
         <div className="px-4 mt-10 py-10 md:px-20 w-[100%] flex flex-col gap-8">
