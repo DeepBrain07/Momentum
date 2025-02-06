@@ -24,7 +24,7 @@ const ServiceCard1: React.FC<ServiceCardProps> = ({title, content, func, image, 
                     }
                 </div>
             </div>
-            <img src={image} alt="servide image" className="rounded-md w-[90%] md:w-[32%] h-[300px] md:h-[400px]"/>
+            <img src={image} alt="servide image" className="rounded-md w-[90%] md:w-[32%] h-[300px] md:h-[300px]"/>
             
         </div>
     )
@@ -34,7 +34,7 @@ const ServiceCard2: React.FC<ServiceCardProps> = ({title, content, image, detail
     console.log(detailsLink)
     return (
         <div className="w-full flex flex-col md:flex-row items-center gap-8 md:justify-between md:gap-[10%]">
-            <img src={image} alt="servide image" className="rounded-md w-[90%] md:w-[32%] h-[300px] md:h-[400px]"/>
+            <img src={image} alt="servide image" className="rounded-md w-[90%] md:w-[32%] h-[300px] md:h-[300px]"/>
             <div className="w-[90%] md:w-[50%] flex flex-col gap-4">
                 <p className={`text-${fontColor || 'white'} text-[22px] font-bold tracking-wider`}>{title}</p>
                 <p className={`text-${fontColor || 'white'} text-[16px] font-light tracking-wide`}>{content}</p>

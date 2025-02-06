@@ -8,7 +8,7 @@ const Author = () => {
             <div className="px-[2vw] md:px-10 bg-white fixed z-50 top-0 left-0 w-[100%] border">
                 <Header/>
             </div>
-            <div className="pt-[100px] flex flex-col">
+            <div className="pt-[100px] md:px-[10vw] flex flex-col">
                 <div className="flex justify-center mt-28"><p className="text-tertiary font-bold text-[26px] md:text-[45px]">Author's Profile</p></div>
                 <div className="px-4 mt-10 py-14 md:px-12 w-[100%] flex flex-col gap-4 bg-[#fcf1de]">
                     <div className="w-full flex flex-col md:flex-row items-center gap-8 md:justify-between md:gap-[10%] py-8">

@@ -42,12 +42,12 @@ const Landing = () => {
   return (
     <div className="w-[100%] bg-backgroundColor">
       {/* Header */}
-      <div className="px-[2vw] md:px-10 bg-white fixed z-50 top-0 left-0 w-[100%] border">
+      <div className="px-[2vw] md:px-10  bg-white fixed z-50 top-0 left-0 w-[100%] border">
         <Header />
       </div>
 
       {/* Hero Section */}
-      <div className="pt-[100px] flex flex-col">
+      <div className="pt-[60px] md:px-[10vw] flex flex-col">
         {/* Desktop Hero */}
         <div
           className="hidden md:block px-4 my-10 mt-0 py-20  pb-30 md:px-20 w-[100%]"
@@ -93,7 +93,7 @@ const Landing = () => {
         </div>
 
         <div className="px-4 p-10 md:px-20 pr-2 flex flex-col gap-8 justify-between">
-            <div className="flex gap-8 flex-col w-[100%] md:w-[60%]">
+            <div className="flex gap-8 w-[100%] justify-center items-center">
                 <p className="text-[#000] text-[22px] text-center">Trusted by leading health organizations globally.</p>
             </div>
             <div className="flex gap-4 overflow-x-scroll w-[100%]">
@@ -232,7 +232,7 @@ const Landing = () => {
         </div>
         
         <div 
-            className="px-4 mt-10 py-20 pb-40 md:px-20 w-[100%]  flex flex-col gap-4 justify-center items-center"
+            className="px-4 mt-10 py-20 pb-30 md:px-20 w-[100%]  flex flex-col gap-4 justify-center items-center"
             style={{
                 backgroundImage: `url(${newsletterBackground})`,
                 backgroundSize: 'cover',

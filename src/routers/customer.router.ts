@@ -10,6 +10,7 @@ import MedicalTourism from "../templates/MedicalTourism/MedicalTourism";
 import HealthMediaManagement from "../templates/HealthMediaManagement/HealthMediaManagement";
 import Academy from "../templates/Academy/Academy";
 import Services from "../templates/Services/Services";
+import Resources from "../templates/Resources/Resources";
 // import Result from "../layouts/customer-layout/confirm-payment/Result"; 
 
 export const CustomerRoutePaths = {
@@ -18,7 +19,7 @@ export const CustomerRoutePaths = {
     AboutUs: "/about-us",
     Articles: {
       Index: "/articles",
-      Articles(articleId?: string) {
+      Articles(articleId: string) {
         return {
           View: `/articles/${articleId}`,
         };
@@ -52,7 +53,13 @@ export const CustomerRouter = createBrowserRouter([
   },
   {
     path: CustomerRoutePaths.Customer.Articles.Index,
-    Component: Articles,
+    Component: Resources,
+    children: [
+      {
+        path: CustomerRoutePaths.Customer.Articles.Articles(":articleId").View,
+        Component: Articles,
+      }
+    ]
   },
   {
     children: [

@@ -13,7 +13,7 @@ const Academy = () => {
             <div className="px-[2vw] md:px-10 bg-white fixed z-50 top-0 left-0 w-[100%] border">
                 <Header/>
             </div>
-            <div className="pt-[100px] flex flex-col">
+            <div className="pt-[100px] md:px-[10vw] flex flex-col">
                 <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} >
                     <div className="flex flex-col gap-4">
                         <p className="text-[#000]  font-bold sm:text-[20px]">Enter your email to download</p>

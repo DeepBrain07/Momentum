@@ -8,14 +8,38 @@ import { avatar } from "../../assets/images"
 import Footer from "../../components/Footer/Footer"
 import { JoinUs } from "../../assets/images"
 import Button from "../../components/Button/Button"
+import { useNavigate } from "react-router-dom"
+import { CustomerRoutePaths } from "../../routers/customer.router"
+import Modal from "../../components/Modal/Modal"
+import { useState } from "react";
 
 const AboutUs = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const navigate = useNavigate()
     return (
         <div className="w-[100%] bg-backgroundColor">
             <div className="px-[2vw] md:px-10 bg-white fixed z-50 top-0 left-0 w-[100%] border">
                 <Header/>
             </div>
-            <div className="pt-[100px] flex flex-col">
+
+            <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} >
+                <div className="flex flex-col gap-4">
+                    <p className="text-[#000]  font-bold sm:text-[20px]">Enter your email to subscribe for our newsletter</p>
+                    <div className="w-[100%]">
+                        <p className="text-[15px] mb-1">Email Address</p>
+                        <input
+                            type="email"
+                            placeholder="Enter email address"
+                            className="w-[100%] p-2 border border-[#CBD5E1] rounded-md"
+                        />
+                    </div>
+                    <div className="flex justify-center">
+                        <Button title="Register" func={()=>{}}/> 
+                    </div>
+                </div>
+            </Modal>
+
+            <div className="pt-[100px] md:px-[10vw] flex flex-col">
                 <div className="p-4 md:p-10 flex flex-col gap-8 bg-backgroundColor">
                     <div className="flex gap-4 flex-col md:w-[70%]">
                         <p className="text-tertiary text-[26px] md:text-[55px]">Empowering healthcare organisations with unstoppable momentum.</p>
@@ -139,8 +163,8 @@ const AboutUs = () => {
                             </p>
                         </div>
                         <div className="flex gap-2 sm:gap-4 w-[100%] flex-wrap items-center justify-center mt-4">
-                            <Button title="Sign Up for our Newsletter" func={()=>{}} secondary={true}/>
-                            <Button title="Explore Topics Now" func={()=>{}}/>
+                            <Button title="Sign Up for our Newsletter" func={()=>{setIsModalOpen(true)}} secondary={true}/>
+                            <Button title="Explore Topics Now" func={()=>navigate(CustomerRoutePaths.Customer.Articles.Index)}/>
                         </div>
                     </div>
                     <div className="w-[100%] flex">

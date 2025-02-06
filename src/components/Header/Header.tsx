@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import Button from "../Button/Button";
+// import Button from "../Button/Button";
 import './style.css'
 import { momentumLogo } from "../../assets/images";
 import { Icon } from "@iconify/react/dist/iconify.js";
@@ -21,9 +21,9 @@ const Header = () => {
         }
     }
 
-    const handleSearch = () => {
-        console.log("clicked")
-    }
+    // const handleSearch = () => {
+    //     console.log("clicked")
+    // }
 
     const handleToggleSidebar = () => { // New function to toggle sidebar
         setSidebarOpen(!sidebarOpen)
@@ -37,20 +37,20 @@ const Header = () => {
     }, [location]);
 
     return (
-        <div className="w-[100%] bg-white py-6 flex justify-between items-center relative">
+        <div className="w-[100%] bg-white py-1 md:px-[6vw] flex justify-between items-center relative">
             <div>
                 <a href="/"><img src={momentumLogo} alt="Momentum logo" className="w-[35vw] md:w-[200px] h-[55px]"/></a>
             </div>
             <div className="hidden md:flex items-center gap-4">
-                <Link to="/about-us"><p className={`${route === '/about-us' ? 'border-b-2 border-primary' : ''}`}>About Us</p></Link>
-                <Link to="/articles"><p className={`${route === '/articles' ? 'border-b-2 border-primary' : ''}`}>Resources</p></Link>
+                <Link to="/about-us"><p className={`${route === '/about-us' ? 'border-b-2 border-primary ' : ''} headerText`}>About Us</p></Link>
+                <Link to="/articles"><p className={`${route === '/articles' ? 'border-b-2 border-primary ' : ''} headerText`}>Resources</p></Link>
                 <div
                     className="relative"
                     onMouseEnter={() => setShowDropDown(true)}
                     onMouseLeave={() => setShowDropDown(false)}
                 >
                     <div className="flex justify-center items-center">
-                        <p className={`${route === "/services" ? "border-b-2 border-primary" : ""} cursor-pointer`}>
+                        <p className={`${route === "/services" ? "border-b-2 border-primary" : ""} cursor-pointer headerText`}>
                             Services
                         </p>
 
@@ -76,9 +76,9 @@ const Header = () => {
                     </div>
                     )}
                 </div>
-                <Link to="/careers"><p className={`${route === '/careers' ? 'border-b-2 border-primary' : ''}`}>Careers</p></Link>
-                <Link to="/contact-us"><p className={`${route === '/contact-us' ? 'border-b-2 border-primary' : ''}`}>Contact Us</p></Link>
-                <Button icon="material-symbols-light:search" title={"Search articles"} func={handleSearch}/>
+                <Link to="/careers"><p className={`${route === '/careers' ? 'border-b-2 border-primary ' : ''} headerText`}>Careers</p></Link>
+                <Link to="/contact-us"><p className={`${route === '/contact-us' ? 'border-b-2 border-primary' : ''} headerText`}>Contact Us</p></Link>
+                {/* <Button icon="material-symbols-light:search" title={"Search articles"} func={handleSearch}/> */}
             </div>
             <div className="flex md:hidden" onClick={handleToggleSidebar}>
                 {!sidebarOpen ?
@@ -97,7 +97,7 @@ const Header = () => {
             {sidebarOpen && (
                 <div className="md:hidden absolute flex flex-col gap-4 top-0 left-[0px] w-[70%] h-screen bg-white shadow-md p-4">
                     <Link to="/about-us"><p className={`${route === '/about-us' ? 'border-b-2 border-primary' : ''} w-fit`}>About Us</p></Link>
-                    <Link to="/articles"><p className={`${route === '/articles' ? 'border-b-2 border-primary' : ''} w-fit`}>Articles</p></Link>
+                    <Link to="/articles"><p className={`${route === '/articles' ? 'border-b-2 border-primary' : ''} w-fit`}>Resources</p></Link>
                     <div onClick={handleDropDown}>
                         <div className="flex gap-4 justify-between">
                             <p className={`${route === '/services' ? 'border-b-2 border-primary' : ''} w-fit`}>Services</p>

@@ -11,7 +11,7 @@ const HealthMediaManagement = () => {
             <div className="px-[2vw] md:px-10 bg-white fixed z-50 top-0 left-0 w-[100%] border">
                 <Header/>
             </div>
-            <div className="pt-[100px] flex flex-col">
+            <div className="pt-[100px] md:px-[10vw] flex flex-col">
                 <div className="p-4 md:p-10 flex flex-col gap-8 bg-backgroundColor">
                     <div className="flex gap-4 flex-col md:w-[80%]">
                         

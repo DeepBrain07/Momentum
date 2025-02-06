@@ -9,7 +9,7 @@ const Articles = () => {
             <div className="px-[2vw] md:px-10 bg-white fixed z-50 top-0 left-0 w-[100%] border">
                 <Header/>
             </div>
-            <div className="pt-[100px] flex flex-col">
+            <div className="pt-[100px] md:px-[10vw] flex flex-col">
                 <div className="p-4 md:p-10 flex flex-col sm:flex-row gap-[2%]">
                     <div className="sm:hidden w-[100%] mb-4">
                         <img src={cholesterol} alt="image" className="rounded-xl w-[100%] h-[200px] "/>
