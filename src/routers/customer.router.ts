@@ -11,7 +11,6 @@ import HealthMediaManagement from "../templates/HealthMediaManagement/HealthMedi
 import Academy from "../templates/Academy/Academy";
 import Services from "../templates/Services/Services";
 import Resources from "../templates/Resources/Resources";
-// import Result from "../layouts/customer-layout/confirm-payment/Result"; 
 
 export const CustomerRoutePaths = {
   Customer: {
@@ -19,18 +18,13 @@ export const CustomerRoutePaths = {
     AboutUs: "/about-us",
     Articles: {
       Index: "/articles",
-      Articles(articleId: string) {
-        return {
-          View: `/articles/${articleId}`,
-        };
-      },
+      // View: (articleId: string) => `/articles/${articleId}`,
     },
     Authors: {
-      Authors(authorId?: string) {
-        return {
-          View: `/authors/${authorId}`,
-        };
-      },
+      View: (authorId: string) => `/authors/${authorId}`,
+    },
+    Article: {
+      View: (articleId: string) => `/articles/${articleId}`,
     },
     Services: "/services",
     Careers: "/careers",
@@ -52,22 +46,21 @@ export const CustomerRouter = createBrowserRouter([
     Component: AboutUs,
   },
   {
-    path: CustomerRoutePaths.Customer.Articles.Index,
-    Component: Resources,
-    children: [
-      {
-        path: CustomerRoutePaths.Customer.Articles.Articles(":articleId").View,
-        Component: Articles,
-      }
-    ]
+    path: CustomerRoutePaths.Customer.Article.View(":articleId"),
+    Component: Articles,
   },
   {
+    path: CustomerRoutePaths.Customer.Articles.Index,
+    Component: Resources,
+  },
+  {
+    path: "/authors",
     children: [
       {
-        path: CustomerRoutePaths.Customer.Authors.Authors(":authorId").View,
+        path: CustomerRoutePaths.Customer.Authors.View(":authorId"),
         Component: Author,
-      }
-    ]
+      },
+    ],
   },
   {
     path: CustomerRoutePaths.Customer.Services,
@@ -96,5 +89,5 @@ export const CustomerRouter = createBrowserRouter([
   {
     path: CustomerRoutePaths.Customer.Academy,
     Component: Academy,
-  }
+  },
 ]);
