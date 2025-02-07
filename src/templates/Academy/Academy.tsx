@@ -4,9 +4,12 @@ import { academy2, graduate, nurse, cholesterol, image3, image4 } from "../../as
 import Footer from "../../components/Footer/Footer"
 import Button from "../../components/Button/Button"
 import Modal from "../../components/Modal/Modal"
+import { useNavigate } from "react-router-dom"
+import { CustomerRoutePaths } from "../../routers/customer.router"
 
 
 const Academy = () => {
+    const navigate = useNavigate();
     const [isModalOpen, setIsModalOpen] = useState(false);
     return (
         <div className="w-[100%] bg-backgroundColor">
@@ -38,8 +41,8 @@ const Academy = () => {
                         <p className="text-tertiary font-bold text-[26px] md:text-[45px]">Empowering healthcare leaders</p>
                         <p className="text-bodyText -tracking-wider">We offer mentorship and staffing solutions for healthcare professionals and organizations, along with access to affordable university admissions for aspiring healthcare talents. Partner with us to build a stronger, more skilled healthcare workforce.</p>
                         <div className="flex gap-4">
-                            <Button title="Apply Now" func={()=>{}}/>
-                            <Button title="Read Brochure" secondary={true} func={()=>{}}/>
+                            <a href="https://wa.me/+4915218122588"><Button title="Apply Now" func={()=>{}}/></a>
+                            <Button title="Read Brochure" func={()=>{setIsModalOpen(true)}} secondary={true} />
                         </div>
                     </div>
                     <div className="w-[100%] rounded-sm">
@@ -63,7 +66,7 @@ const Academy = () => {
                                 <br/>From tailored workshops to hands-on training, we prepare individuals to meet the demands of the ever-evolving healthcare industry.</p>
                             <div className=""> 
                                 
-                                <Button title="Apply Now" func={()=>{}} />
+                                <a href="https://wa.me/+4915218122588"><Button title="Apply Now" func={()=>{}} /></a>
                             </div>
                         </div>
                         <img src={nurse} alt="megaphone" className="rounded-md w-[90%] md:w-[36%] h-[300px] md:h-[350px]"/>
@@ -79,7 +82,7 @@ const Academy = () => {
                             <p className={`text-bodyTextColor text-[16px] font-light tracking-wide`}>We equip healthcare professionals with the skills and training needed to thrive in today’s evolving healthcare industry.
                                 <br/>From tailored workshops to hands-on training, we prepare individuals to meet the demands of the ever-evolving healthcare industry.</p>
                             <div className=""> 
-                                <Button title="Contact Us" func={()=>{}} />
+                                <a href="https://wa.me/+4915218122588"><Button title="Contact Us" func={()=>{}} /></a>
                             </div>
                         </div>
                     </div>
@@ -98,7 +101,7 @@ const Academy = () => {
                                     <p className={` text-[14px] font-light `}>By Shalom Ngbala-Okpab </p>
                                     <p className={` text-[14px] font-light `}>Posted on September 1, 2022</p>
                                 </div>
-                                <div><Button title="Read Article" func={()=>{}}/></div>                 
+                                <div><Button title="Read Article" func={()=>navigate(CustomerRoutePaths.Customer.Articles.Index)}/></div>                 
                             </div>
                             <div className="w-[100%] flex flex-col justify-start  gap-2 rounded-md">
                                 <img src={image3} alt="cholesterol" className="w-[90%] md:w-[250px] items-center h-[130px]  rounded-lg"/>
@@ -107,7 +110,7 @@ const Academy = () => {
                                     <p className={` text-[14px] font-light `}>By Shalom Ngbala-Okpab </p>
                                     <p className={` text-[14px] font-light `}>Posted on September 1, 2022</p>
                                 </div>                            
-                                <div><Button title="Read Article" func={()=>{}}/></div>
+                                <div><Button title="Read Article" func={()=>navigate(CustomerRoutePaths.Customer.Articles.Index)}/></div>
                             </div>
                             <div className="w-[100%] flex flex-col justify-start gap-2 rounded-md">
                                 <img src={image3} alt="cholesterol" className="w-[90%] md:w-[250px] items-center h-[130px]  rounded-lg"/>
@@ -116,7 +119,7 @@ const Academy = () => {
                                     <p className={` text-[14px] font-light `}>By Shalom Ngbala-Okpab </p>
                                     <p className={` text-[14px] font-light `}>Posted on September 1, 2022</p>
                                 </div>                            
-                                <div><Button title="Read Article" func={()=>{}}/></div>
+                                <div><Button title="Read Article" func={()=>navigate(CustomerRoutePaths.Customer.Articles.Index)}/></div>
                             </div>
                             <div className="w-[100%] flex flex-col justify-start gap-2 rounded-md ">
                                 <img src={image4} alt="cholesterol" className="w-[90%] md:w-[250px] h-[130px] rounded-lg"/>
@@ -125,7 +128,7 @@ const Academy = () => {
                                     <p className={` text-[14px] font-light `}>By Shalom Ngbala-Okpab </p>
                                     <p className={` text-[14px] font-light `}>Posted on September 1, 2022</p>
                                 </div>                            
-                                <div><Button title="Read Article" func={()=>{}}/></div>
+                                <div><Button title="Read Article" func={()=>navigate(CustomerRoutePaths.Customer.Articles.Index)}/></div>
                             </div>   
                         </div>
                     </div>

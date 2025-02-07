@@ -20,11 +20,13 @@ import Footer from "../../components/Footer/Footer";
 import Button from "../../components/Button/Button";
 import { CustomerRoutePaths } from "../../routers/customer.router";
 import { useRef, useEffect } from "react";
+import { handleSubscribe } from "../../hooks/HandleSubscribe";
+import { useState } from "react";
 
 const Landing = () => {
   const servicesRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
-
+  const [email, setEmail] = useState("");
 
   const companies = [company1, company2, company3, company4, company5, company6, company7, company8,]
 
@@ -249,9 +251,11 @@ const Landing = () => {
                             type="text"
                             placeholder="Enter your email"
                             className="p-2 w-[90%]"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                         />
                         <div className="w-fit">
-                            <Button icon="fontisto:email" title="Subscribe" func={()=>console.log("sunscribe")}/>
+                            <Button icon="fontisto:email" title="Subscribe" func={() => handleSubscribe(email, setEmail)}/>
                         </div>
                     </div>
                 </div>                                

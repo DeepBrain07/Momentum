@@ -12,8 +12,11 @@ import { useNavigate } from "react-router-dom"
 import { CustomerRoutePaths } from "../../routers/customer.router"
 import Modal from "../../components/Modal/Modal"
 import { useState } from "react";
+import { handleSubscribe } from "../../hooks/HandleSubscribe"
 
 const AboutUs = () => {
+    
+    const [email, setEmail] = useState("");
     const [isModalOpen, setIsModalOpen] = useState(false);
     const navigate = useNavigate()
     return (
@@ -31,10 +34,12 @@ const AboutUs = () => {
                             type="email"
                             placeholder="Enter email address"
                             className="w-[100%] p-2 border border-[#CBD5E1] rounded-md"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                         />
                     </div>
                     <div className="flex justify-center">
-                        <Button title="Register" func={()=>{}}/> 
+                        <Button title="Register" func={() => handleSubscribe(email, setEmail)}/> 
                     </div>
                 </div>
             </Modal>

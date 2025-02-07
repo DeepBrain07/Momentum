@@ -4,14 +4,43 @@ import { cholesterol, avatar, JoinUs, image2, image3, image4, healthcareConsulti
 import Footer from "../../components/Footer/Footer"
 import Button from "../../components/Button/Button"
 import { CareerCard2 } from "../../components/CareerCard/CareerCard"
+import { useNavigate } from "react-router-dom"
+import { CustomerRoutePaths } from "../../routers/customer.router"
+import { useState } from "react"
+import { handleSubscribe } from "../../hooks/HandleSubscribe"
+import Modal from "../../components/Modal/Modal"
 
 const HealthCareConsulting = () => {
+
+    
+    const [email, setEmail] = useState("");
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const navigate = useNavigate()
+    
     return (
         <div className="w-[100%] bg-backgroundColor">
             <div className="px-[2vw] md:px-10 bg-white fixed z-50 top-0 left-0 w-[100%] border">
                 <Header/>
             </div>
             <div className="pt-[100px] md:px-[10vw] flex flex-col">
+                <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} >
+                    <div className="flex flex-col gap-4">
+                        <p className="text-[#000]  font-bold sm:text-[20px]">Enter your email to subscribe for our Newsletter</p>
+                        <div className="w-[100%]">
+                            <p className="text-[15px] mb-1">Email Address</p>
+                            <input
+                                type="email"
+                                placeholder="Enter email address"
+                                className="w-[100%] p-2 border border-[#CBD5E1] rounded-md"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                            />
+                        </div>
+                        <div className="flex justify-center">
+                            <Button title="Register" func={() => handleSubscribe(email, setEmail)}/> 
+                        </div>
+                    </div>
+                </Modal>
                 <div className="p-4 md:p-10 flex flex-col gap-8 bg-backgroundColor">
                     <div className="flex gap-4 flex-col md:w-[80%]">
                         
@@ -19,7 +48,7 @@ const HealthCareConsulting = () => {
                         <p className="text-tertiary font-bold text-[26px] md:text-[45px]">Transforming Healthcare,<br/> One Solution at a Time</p>
                         <p className="text-bodyText -tracking-wider">We provide tailored consulting services to help healthcare organizations improve efficiency, enhance patient care, and achieve lasting growth.</p>
                         <div>
-                            <Button title="Schedule a Consultation" func={()=>{}}/>
+                            <a href="https://wa.me/+4915218122588"><Button title="Schedule a Consultation" func={()=>{}}/></a>
                         </div>
                     </div>
                     <div className="w-[100%] rounded-sm">
@@ -105,7 +134,7 @@ const HealthCareConsulting = () => {
                         </div>
                     </div>
                     <div className="flex justify-center">
-                        <Button title="Read More Articles" icon="maki:arrow" article={true} func={()=>{}}/>
+                        <Button title="Read More Articles" icon="maki:arrow" article={true} func={()=>navigate(CustomerRoutePaths.Customer.Articles.Index)}/>
                     </div>
                 </div>
 
@@ -184,7 +213,7 @@ const HealthCareConsulting = () => {
                         </div>
                         <div className="flex justify-center">
                             <Button title="Send Message" func={()=>{}}/>
-                        </div>
+                        </div>  
                     </div>
                 </div>
 
@@ -204,8 +233,8 @@ const HealthCareConsulting = () => {
                             </p>
                         </div>
                         <div className="flex gap-2 sm:gap-4 w-[100%] flex-wrap items-center justify-center mt-4">
-                            <Button title="Sign Up for our Newsletter" func={()=>{}} secondary={true}/>
-                            <Button title="Explore Topics Now" func={()=>{}}/>
+                            <Button title="Sign Up for our Newsletter" func={()=>{setIsModalOpen(true)}} secondary={true}/>
+                            <Button title="Explore Topics Now" func={()=>navigate(CustomerRoutePaths.Customer.Articles.Index)}/>
                         </div>
                     </div>
                     <div className="w-[100%] flex">

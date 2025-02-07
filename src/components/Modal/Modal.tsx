@@ -12,15 +12,15 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <div className="bg-white p-6 rounded-lg shadow-lg w-[80%] sm:w-[60%]">
-        <div className="flex justify-between items-center pb-2">
-            <div className="bg-[#E8EDFB] p-2 rounded-[50%]">
+      <div className="bg-white p-6 rounded-lg max-w-[500px] shadow-lg w-[80%] sm:w-[60%]">
+        <div className="flex justify-end items-center pb-2">
+            {/* <div className="bg-[#E8EDFB] p-2 rounded-[50%]">
                 <Icon
                     icon={"ic:outline-download"}
                     width={24}
                     color="#013B7D"
                 />
-            </div>
+            </div> */}
             <button onClick={onClose} className="text-gray-500 hover:text-gray-700">
             <Icon
                 icon={"material-symbols:cancel-outline"}

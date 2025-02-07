@@ -18,7 +18,7 @@ const MedicalTourism = () => {
                         <p className="text-tertiary font-bold text-[26px] md:text-[45px]">Your gateway to world-class healthcare services globally.</p>
                         <p className="text-bodyText -tracking-wider">Connecting you with trusted medical providers around the world. From planning to recovery, we’re with you every step of the way.</p>
                         <div>
-                            <Button title="Contact Us" func={()=>{}}/>
+                            <a href="https://wa.me/+4915218122588"><Button title="Contact Us" func={()=>{}}/></a>
                         </div>
                     </div>
                     <div className="w-[100%] rounded-sm">
@@ -27,7 +27,7 @@ const MedicalTourism = () => {
                     <div className="flex justify-center px-[2%] sm:px-[10%] flex-col items-center gap-8">
                         <p className="text-bodyText text-center -tracking-wider">Medical tourism enables patients to access top-tier medical care while exploring new destinations. Whether it’s specialized treatments, affordable options, or shorter wait times, our services make it seamless for you to receive the care you deserve—anywhere in the world.</p>
                         <div>
-                            <Button title="Contact Us to book us" func={()=>{}}/>
+                            <a href="https://wa.me/+4915218122588"><Button title="Contact us to book us" func={()=>{}}/></a>
                         </div>
                     </div>
                 </div>

@@ -4,20 +4,45 @@ import CareerCard from "../../components/CareerCard/CareerCard"
 import JobDetailsCard from "../../components/JobDetailsCard/JobDetailsCard"
 import Footer from "../../components/Footer/Footer"
 import Button from "../../components/Button/Button"
+import { useState } from "react"
+import Modal from "../../components/Modal/Modal"
+import { handleSubscribe } from "../../hooks/HandleSubscribe"
 
 const Careers = () => {
+    
+    const [email, setEmail] = useState("");
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     return (
         <div className="w-[100%] bg-backgroundColor">
             <div className="px-[2vw] md:px-10 bg-white fixed z-50 top-0 left-0 w-[100%] border">
                 <Header/>
             </div>
             <div className="pt-[100px] md:px-[10vw] flex flex-col">
+                <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} >
+                    <div className="flex flex-col gap-4">
+                        <p className="text-[#000]  font-bold sm:text-[20px]">Enter your email to join our mailing list</p>
+                        <div className="w-[100%]">
+                            <p className="text-[15px] mb-1">Email Address</p>
+                            <input
+                                type="email"
+                                placeholder="Enter email address"
+                                className="w-[100%] p-2 border border-[#CBD5E1] rounded-md"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                            />
+                        </div>
+                        <div className="flex justify-center">
+                            <Button title="Register" func={() => handleSubscribe(email, setEmail)}/> 
+                        </div>
+                    </div>
+                </Modal>
                 <div className="p-4 md:p-10 flex flex-col gap-8 bg-backgroundColor">
                     <div className="flex gap-4 flex-col md:w-[80%]">
                         <p className="text-tertiary font-bold text-[26px] md:text-[45px]">Be Part of a Team That Makes a Difference</p>
                         <p className="text-bodyText -tracking-wider">At Momentum, we’re passionate about empowering organisations and individuals with solutions for impact. Join our diverse, innovative team and help shape the future of healthcare.</p>
                         <div>
-                            <Button title="Join Us" func={()=>{}}/>
+                            <a href="https://x.com/momentumHCare?t=PAcSZG8zZ9sgtTzoDMf-Nw&s=09"><Button title="Join Us" func={()=>{}}/></a>
                         </div>
                     </div>
                     <div className="w-[100%] rounded-sm">
@@ -88,7 +113,7 @@ const Careers = () => {
                             </p>
                         </div>
                         <div className="flex gap-2 sm:gap-4 w-[100%] flex-wrap items-center justify-center mt-4">
-                            <Button title="Join our mailing list" func={()=>{}}/>
+                            <Button title="Join our mailing list" func={()=>{setIsModalOpen(true)}} secondary={true}/>
                         </div>
                     </div>
                     <div className="w-[100%] flex">

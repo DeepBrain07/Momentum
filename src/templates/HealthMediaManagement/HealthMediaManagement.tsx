@@ -19,7 +19,7 @@ const HealthMediaManagement = () => {
                         <p className="text-tertiary font-bold text-[26px] md:text-[45px]">Amplifying brand awareness and lead generation</p>
                         <p className="text-bodyText -tracking-wider">We craft strategic health media campaigns that educate, engage, and inspire audiences amplifying brand awareness and lead generation. From content creation to digital marketing, we connect healthcare providers with the people who need them most.</p>
                         <div>
-                            <Button title="Book our service today" func={()=>{}}/>
+                            <a href="https://wa.me/+4915218122588"><Button title="Book our service today" func={()=>{}}/></a>
                         </div>
                     </div>
                     <div className="w-[100%] rounded-sm">
@@ -36,7 +36,7 @@ const HealthMediaManagement = () => {
                             <div className="flex flex-col w-[100%] gap-10 items-center flex-wrap"> 
                                 <div className="flex gap-[20vw] md:gap-36 w-[100%] justify-center">   
                                     {/* Facebook */}
-                                    <a href="">
+                                    <a href="https://www.facebook.com/share/1BvE3xUTz4/">
                                         <Icon
                                             icon="logos:facebook"
                                             width={40}
@@ -44,7 +44,7 @@ const HealthMediaManagement = () => {
                                         />
                                     </a>
                                     {/* Instagram */}
-                                    <a>
+                                    <a href="https://www.instagram.com/momentum_healthcare?igsh=NHBiZzNlazFxNXlh">
                                         <Icon
                                             icon="skill-icons:instagram"
                                             width={40}
@@ -54,7 +54,7 @@ const HealthMediaManagement = () => {
                                 </div>
                                 <div className="flex gap-[20vw] md:gap-36 w-[100%] justify-center">
                                     {/* Twitter */}
-                                    <a>
+                                    <a href="https://x.com/momentumHCare?t=PAcSZG8zZ9sgtTzoDMf-Nw&s=09">
                                         <Icon
                                             icon="devicon:twitter"
                                             width={40}
@@ -62,7 +62,7 @@ const HealthMediaManagement = () => {
                                         />
                                     </a>
                                     {/* LinkedIn */}
-                                    <a>
+                                    <a href="https://www.linkedin.com/company/momentum-healthcare-group">
                                         <Icon
                                             icon="skill-icons:linkedin"
                                             width={40}
@@ -72,7 +72,7 @@ const HealthMediaManagement = () => {
                                 </div>
                                 <div className="flex gap-[20vw] md:gap-36 w-[100%] justify-center">
                                     {/* YouTube */}
-                                    <a>
+                                    <a href="https://youtube.com/@momentumhealthcare2175?si=sCsYAPkK3wLwty9W">
                                         <Icon
                                             icon="logos:youtube-icon"
                                             width={40}
@@ -80,7 +80,7 @@ const HealthMediaManagement = () => {
                                         />
                                     </a>
                                     {/* WhatsApp */}
-                                    <a>
+                                    <a href="https://wa.me/+4915218122588">
                                         <Icon
                                             icon="logos:whatsapp-icon"
                                             width={40}
@@ -90,7 +90,7 @@ const HealthMediaManagement = () => {
                                 </div>
                             </div>
                             <div>
-                                <Button title="Book our service today" func={()=>{}} />
+                                <a href="https://wa.me/+4915218122588"><Button title="Book our service today" func={()=>{}} /></a>
                             </div>
                         </div>
                         <img src={megaphone} alt="megaphone" className="rounded-md w-[90%] md:w-[32%] h-[300px] md:h-[400px]"/>
@@ -110,9 +110,6 @@ const HealthMediaManagement = () => {
                                 <li className="ml-4 text-white"><p className={`text-white text-[16px] font-light tracking-wide`}>Content Creation</p></li>
                                 <li className="ml-4 text-white"><p className={`text-white text-[16px] font-light tracking-wide`}>Website development & Management</p></li>
                             </ul>
-                            <div>
-                                <Button title="View Details" func={()=>{}} color="white"/>
-                            </div>
                         </div>            
                     </div>
                 </div>
