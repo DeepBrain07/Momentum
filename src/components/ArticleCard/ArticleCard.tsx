@@ -19,7 +19,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({title, category, image, detail
                     <p className={`text-[#000] text-[14px] max-w-[62%] font-bold tracking-wider`}>{category}</p>
                     <p className={`text-[#838383] text-[12px] font-light tracking-wide`}>{date}</p>
                 </div>
-                <a href={detailsLink}><p className={`text-primary text-[16px] font-semibold tracking-normal`}>{title}</p></a>
+                <p className={`text-primary text-[16px] font-semibold tracking-normal`}>{title}</p>
                 
             </div>           
         </div>
