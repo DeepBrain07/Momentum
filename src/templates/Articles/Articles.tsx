@@ -152,21 +152,21 @@ const Articles = () => {
                             category="Mental and Emotional Health"
                             date="March 18, 2024"
                             image={mentalHealth}
-                            detailsLink={CustomerRoutePaths.Customer.Article.View("vitamin-e")}
+                            detailsLink={CustomerRoutePaths.Customer.Article}
                         />
                         <ArticleCard
                             title="Vaginal Tightening: All You Need To Know"
                             category="Sexual and Reproductive Health"
                             date="March 18, 2024"
                             image={vagina}
-                            detailsLink={CustomerRoutePaths.Customer.Article.View("vitamin-e")}
+                            detailsLink={CustomerRoutePaths.Customer.Article}
                         />
                         <ArticleCard
                             title="7 Deadly Conditions You Can Get From Smoking"
                             category="Family Health"
                             date="March 18, 2024"
                             image={cigarette}
-                            detailsLink={CustomerRoutePaths.Customer.Article.View("vitamin-e")}
+                            detailsLink={CustomerRoutePaths.Customer.Article}
                         />
                     </div>
                 </div>

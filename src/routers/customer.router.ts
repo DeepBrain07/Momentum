@@ -23,9 +23,7 @@ export const CustomerRoutePaths = {
     Authors: {
       View: (authorId: string) => `/authors/${authorId}`,
     },
-    Article: {
-      View: (articleId: string) => `/articles/${articleId}`,
-    },
+    Article: `/article`,
     Services: "/services",
     Careers: "/careers",
     ContactUs: "/contact-us",
@@ -46,7 +44,7 @@ export const CustomerRouter = createBrowserRouter([
     Component: AboutUs,
   },
   {
-    path: CustomerRoutePaths.Customer.Article.View(":articleId"),
+    path: CustomerRoutePaths.Customer.Article,
     Component: Articles,
   },
   {
